@@ -8,6 +8,10 @@ repo = Repo(os.getcwd())
 #Get The Date
 date = repo.git.log('-1', '--format=%cd', '--date=format:%Y-%m-%d') 
 
+# Git pull
+origin = repo.remote(name='origin')
+origin.pull()
+
 # Get Random Number for the day
 rd = random.randint(1, 10)
 
