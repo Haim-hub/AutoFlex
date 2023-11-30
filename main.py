@@ -1,3 +1,4 @@
+#!/opt/homebrew/bin/python3
 import random
 from git import Repo
 import os
@@ -16,7 +17,7 @@ def check_internet_connection(url='http://www.github.com', timeout=5):
 if check_internet_connection():
     print("Internet connection is available.")
     # Path to your repository
-    repo = Repo(os.getcwd())
+    repo = Repo("/Users/niklashaim/Documents/GitHub_Flex/AutoFlex")
 
     #Get The Date
     date = repo.git.log('-1', '--format=%cd', '--date=format:%Y-%m-%d') 
@@ -30,7 +31,7 @@ if check_internet_connection():
 
     for i in range(rd):
         number = 0
-        file_path = 'main.txt'
+        file_path = '/Users/niklashaim/Documents/GitHub_Flex/AutoFlex/main.txt'
         # Read file
         with open(file_path, 'r') as f:
             lines = f.readlines()
