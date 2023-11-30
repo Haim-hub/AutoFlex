@@ -6,7 +6,7 @@ import os
 repo = Repo(os.getcwd())
 
 #Get The Date
-date = repo.git.log('-1', '--format=%cd', '--date=format:%Y-%m-%d')
+date = repo.git.log('-1', '--format=%cd', '--date=format:%Y-%m-%d') 
 
 # Get Random Number for the day
 rd = random.randint(1, 10)
