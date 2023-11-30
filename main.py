@@ -22,12 +22,17 @@ for i in range(rd):
     with open(file_path, 'r') as f:
         lines = f.readlines()
         last_line = lines[-1]
-        number = int(last_line.split()[-1])
+        last_word = last_line.split()[-1]
+        try:
+            number = int(last_word)
+            # Use 'number' in your script
+        except ValueError:
+            print(f"The last word '{last_word}' is not a number.")
 
     # Clear file
     with open(file_path, 'w') as file:
         # Write new content to the file
-        file.write("Your new content here")
+        file.write("")
 
     # Change File
     with open(file_path, 'a') as f:
