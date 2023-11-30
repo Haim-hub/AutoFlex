@@ -12,7 +12,7 @@ Because I wanted to flex my GitHub contributions without actually having contrib
 
 ## How to use?
 
-To use this script, you need to have Python 3 installed. You can install it by running `pip3 install requests` in your terminal.
+To use this script, you need to have Python 3 installed. You also need requests. You can install it by running `pip3 install requests` in your terminal.
 You also need to have Git installed. You can install it by running `pip3 install GitPython` in your terminal.
 
 1. Fork this repository.
@@ -45,3 +45,5 @@ For Linux and MacOS, you can use cron jobs to run the script daily.
 ```
 
 4. Save and exit the editor.
+
+**Note:** using cron jobs will only only work if your computer is running at the time the script is supposed to run. If not it will simply be skipped. You could setup a server to run the script on, but that is beyond the scope of this README.
